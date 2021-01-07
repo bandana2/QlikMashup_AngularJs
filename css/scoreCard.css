@@ -1,0 +1,1075 @@
+body {
+    font-family: "QlikView Sans" ,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+    background-color: #fff;
+}
+
+
+a, button, input, select, option, .btn,
+.iconMenu, .icon_arrow, .qv-chart-scrollable, .switchBtn {
+    cursor: pointer;
+}
+/*---------------HEADER--------------*/
+ #header_container {
+     width: 100%;
+}
+ #header_full {
+     background-color: rgb(50,94,134);
+     width: 100%;
+     margin-left: 0;
+     color: white;
+}
+ #logo_full {
+     position: relative;
+     background-color: rgb(50,94,134);
+     margin-bottom: 0px;
+     padding: 0;
+     height: 6vw;
+     overflow: hidden;
+}
+.breadcrumb{
+    background-color: #ebebeb!important
+}
+.breadcrumb #headerTitle{
+    font-size: 1.3vw;
+    margin: 0;
+    font-weight: 600;
+    color: #50555a;
+}
+
+.breadcrumb #headerTitle #brandTitle,
+.breadcrumb #headerTitle #countryTitle{
+    display: none
+}
+
+
+ #bgImg {
+     margin-top: -7vw;
+     width: 100%;
+}
+ #logoImg {
+     position: absolute;
+     width: 7%;
+     left: 2%;
+     bottom: 18%;
+}
+ #logo_full h1 {
+     position: absolute;
+     bottom: 32%;
+     left: 14%;
+     font-family: arial;
+     font-size: 2.4vw;
+}
+ #logo_full span {
+     position: absolute;
+     bottom: 8%;
+     left: 14.2%;
+     font-family: arial;
+     font-size: 1.2vw;
+}
+ #menu_full {
+    height:2.3vw;
+}
+ #wrap {
+     position: relative;
+     height: 100%;
+}
+ #menu_list {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     height: 100%;
+     font-size: 0.9vw;
+     display: flex;
+     top: -0.3vw;
+}
+ #menu_list .iconMenu {
+     width:1vw;
+     height:8%;
+     margin-right: 0.2vw;
+}
+ #menu_list a {
+     color: white;
+     text-decoration: none;
+     padding-bottom: 4px;
+     display: flex;
+}
+ #menu_list p {
+     margin: 0;
+     margin-top: 0.8vw;
+     margin-right: 1vw;
+}
+ #menu_list a:hover {
+     border-bottom: 3px solid white;
+}
+ #navLogo {
+    height: 50px;
+    margin-top: -0.5vw;
+}
+ .iconMenu {
+    height:1vw;
+     width: 1vw;
+}
+ #header_container .navbar-default {
+    background-color: rgb(50,94,134);
+     margin:0;
+     border-radius: 0;
+     color: white;
+}
+ #header_container .navbar-nav>li>a {
+    color: white;
+}
+ #header_container .navbar-nav>li>a:hover {
+    box-shadow: 0 -5px 0 0 inset;
+    background-color: rgba(255,255,255,0.1)!important;
+}
+ #header_container .navbar-nav {
+    margin-top: 2.6vw;
+}
+ #header_container .navbar-header {
+     width: 45%;
+     font-size: 25px;
+}
+ #header_container .nav>li>a {
+     padding: 10px 8px;
+}
+ #header_container #headerTitle {
+     margin: 0.5vw 0 0 0;
+}
+ #header_full_mod #headerTitle {
+    font-size: 25px;
+    margin: 0.5vw 0 0 0;
+}
+ #header_full_mod #headerSubtitle {
+    font-size: 0.5em;
+}
+ @media (max-width: 1000px) {
+     #header_container .navbar-header {
+         float: none;
+         width: 100%;
+         margin: 0;
+    }
+     #header_container .navbar-left,.navbar-right {
+         float: none !important;
+    }
+     #header_container .navbar-toggle {
+         display: block;
+         border-color: #ffffff;
+         margin-right: 0;
+         float: right;
+    }
+     #header_container .navbar-toggle:hover {
+         display: block;
+         border-color: #053765;
+         background-color: #ffffff 
+    }
+     #header_container .navbar-toggle span.icon-bar{
+         background-color: #ffffff;
+    }
+     #header_container .navbar-toggle:hover span.icon-bar{
+         background-color: #325e86;
+    }
+     #header_container .navbar-collapse {
+         border-top: 1px solid transparent;
+         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+     #header_container .navbar-fixed-top {
+         top: 0;
+         border-width: 0 0 1px;
+    }
+     #header_container .navbar-collapse.collapse {
+         display: none!important;
+    }
+     #header_container .navbar-nav {
+         float: none!important;
+         margin-top: 7.5px;
+    }
+     #header_container .navbar-nav>li {
+         float: none;
+    }
+     #header_container .navbar-nav>li>a {
+         padding-top: 10px;
+         padding-bottom: 10px;
+    }
+     #header_container .collapse.in{
+         display:block !important;
+         margin-top: 1vw;
+    }
+}
+ @media only screen and (max-width: 925px) {
+    /*#logo_full {
+        width:100%;
+    }
+     #menu_full {
+        display: none;
+    }
+    */
+}
+ @media only screen and (max-width: 500px) {
+     #logo_full {
+        width:50%;
+    }
+     #menu_full {
+        display: block;
+    }
+}
+/* #menu_full {
+     width:30%;
+     background-color: rgb(82,145,221);
+     font-size:1.3vw;
+     display: block;
+}
+*/
+/*---------------QLIK SENSE SELECTIONS BAR--------------*/
+ .qvobjectBar {
+     position:relative;
+     top:-1px;
+     left:0;
+     height: 35px;
+     width: 50%;
+     float: left;
+}
+/*---------------FILTER BAR--------------*/
+ #filterBar_container {
+    width: 50%;
+    float: left;
+    background: #5b5a59;
+}
+ #filterBar {
+     height: 37px;
+     padding-bottom: initial;
+     display: flex;
+}
+ #filterBar .dropdown-menu{
+     position: relative;
+     width: 90%;
+     top: 0;
+}
+ #filterBar .dropdown-menu li{
+     font-size: 12px;
+     white-space: normal;
+}
+ #filterBar div {
+     width: 50%;
+}
+ #filterBar div#fltPosition0{
+     margin: 0;
+     padding: 0;
+}
+ #filterBar div#fltPosition0 .dropdown{
+     width: 100%;
+}
+ #filterBar div#fltPosition0 .dropdown button{
+     border-radius: 0;
+     width: 100%;
+     background-color: #f2f2f2;
+     text-align: left;
+     padding-right: 0;
+     box-shadow: -18px 0 0 0 #365d81 inset;
+     border: 0;
+     border-bottom: 1px solid #aaa;
+     border-top: 1px solid #aaa;
+     height: 36px;
+}
+ #filterBar div#fltPosition0 .dropdown button:after{
+     content: '';
+     background-color: #325e86;
+     width: 10%;
+     height: 100%;
+     position: absolute;
+     right: 0;
+     top: 0;
+}
+ #filterBar div#fltPosition0 .dropdown button span.caret{
+     background-color: #365d81;
+     text-align: left;
+     padding-right: 0;
+     color: #fff;
+     display: block;
+     position: absolute;
+     right: 0;
+     margin: 0;
+     top: 50%;
+     transform: translate(50%, -50%);
+     margin-right: 5%;
+     z-index: 9;
+}
+ #flt1p2t1, #flt1p3t1, #flt1p2t3 {
+     margin-left: 13px;
+}
+ .iconFlt {
+     width: 1.1em;
+}
+ .btn-secondary p {
+     float: right;
+     border-left: 1px solid #ddd;
+     padding-left: 0.7vw;
+     margin: 0;
+}
+ #indicationFlt, #countryFlt, #brandFlt {
+    min-width: 150px;
+     width: 15vw;
+}
+ #indicationFlt .labelText, #countryFlt .labelText , #brandFlt .labelText{
+    border-radius: 0;
+    width: 90%;
+    background-color: #ffffff;
+    height: 36px;
+}
+ #indicationFltBtn, #countryFltBtn, #brandFltBtn {
+     background-color: rgba(50,94,134,0.9);
+     color: white;
+     border-left: 1px solid #bbb;
+     width: 10%!important;
+     border-radius: 0;
+     padding-left: 0;
+     padding-right: 0;
+     height: 36px;
+}
+ .labelText {
+    background-color: white 
+    /*rgba(50,94,134, 0.3)*/
+    ;
+     width:75%;
+     text-align: left !important;
+     border: 1px solid #aaa !important;
+}
+/*---------------CONTENT--------------*/
+ #content {
+     width: 100%;
+     padding-top: 60px;
+}
+ #page1 {
+     padding-left: 3%;
+     padding-right: 3%;
+     padding-bottom: 70px;
+     background-color: white;
+     z-index:1;
+}
+ #page1 div {
+     /* z-index: 6; */
+}
+#page1 .KPI.KPIwithImage *{
+     cursor: default!important
+}
+#page1 .KPI.KPIwithImage .label{
+    font-size: 1.4vw!important;
+}
+#page1 .KPI .KPIrow1 *{
+     cursor: default!important
+}
+
+#page1 .KPI .KPIrow1 .qv-object-barchart *{
+     cursor: pointer!important
+}
+
+
+ .KPI {
+     width: 100%;
+     background-color: white;
+     box-shadow: 0px 2px 8px rgb(189,189,189);
+     display: flex;
+     position: relative;
+}
+ .KPIsrow0 .KPI {
+    height: 10.5vw;
+    margin-bottom: 0.8vw;
+}
+ .KPIsrow1 .KPI {
+    height: 15.5vw;
+    margin-bottom: 0.8vw;
+}
+
+ .KPIsrow4.KPI {
+    padding: 0
+}
+
+ .KPIsrow1 {
+    padding-bottom: 15px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+
+ .KPIsrow1, .KPIsrow2, .KPIsrow3, .KPIsrow4{
+     margin-top: 0.8vw;
+}
+ .row {
+     margin-left: 0 !important;
+     margin-right: 0!important;
+}
+ .qvObgContainer {
+     width: 100%;
+     height: 100%;
+}
+ .KPIwithImage .qvObgContainer {
+     width: 60%;
+     height: 60%;
+     margin-top: 2vw;
+}
+ .qv-object-qsSimpleKPI {
+    border:none;
+}
+ .KPIsrow1 .caret {
+    border: none !important;
+}
+ #qsObject1hdn {
+    height:400px !important;
+}
+/*@media only screen and (min-width: 925px) {
+     .KPIsrow1 .statistic-1 .label {
+         font-size: 1.5rem !important;
+    }
+     .KPIsrow1 .statistic-1 .value {
+         font-size: 2.5rem !important;
+    }
+     .KPIsrow1 .statistic-2 .value {
+         font-size: 1.5rem !important;
+    }
+     .KPIsrow1 .statistic-2 .label {
+         font-size: 0.8rem !important;
+    }
+     .KPIsrow2 .statistic-1 .value {
+         font-size: 1.5rem !important;
+    }
+     .KPIsrow2 .statistic .label {
+         font-size: 1rem !important;
+    }
+}
+*/
+ .KPIsrow1 .statistic-1 .label {
+     font-size: auto;
+}
+ .KPIsrow1 .statistic-1 .value {
+     font-size: 1.3vw!important;
+}
+ .KPIsrow1 .statistic-2 .value {
+     font-size: 1.1vw !important;
+}
+ .KPIsrow1 .statistic-2 .label {
+     font-size: 0.8vw !important;
+}
+ .KPIsrow2 .statistic-1 .value {
+     font-size: 1.3vw !important;
+}
+ .KPIsrow2 .statistic .label {
+     font-size: 1vw!important;
+}
+ .qv-object-qsstatistic .statistic.ui > .value, .qv-object-qsstatistic .statistics.ui .statistic > .value {
+    line-height: 1.3em !important;
+}
+ .label {
+    line-height: 2 !important;
+}
+ .qv-object .qv-object-title .qv-object-title-text {
+     font-size: 1.1em;
+     font-weight: 400;
+}
+ .KPIimg img {
+     width: 8.5vw;
+     margin: 0.5vw 0 0 15px;
+}
+ .KPIimg {
+     width: 40%;
+     overflow: hidden;
+}
+.KPIsrow2 > div:nth-child(2){
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+.KPIsrow2 > div:nth-child(3){
+    border-right: 1px solid #e2e2e2;
+}   
+#page1 .KPIsrow2 {
+    margin-top: 50px;
+    /* box-shadow: 0px 2px 8px rgb(189,189,189); */
+    margin: 15px!important;
+    /* padding: 15px 0; */
+}
+#page1 .KPIsrow2 .KPI {
+    box-shadow: none
+}
+#page1 .KPIsrow2 .icon_arrow {
+    display: none
+}
+ .KPIsrow3, .KPIsrow4 {
+     display: none;
+     width: 100%;
+     padding-top: 2px;
+     margin-top: 0;
+}
+ .KPIsrow3{
+     display: block;
+     height: 45px;
+     padding-top: 0;
+     box-shadow: none;
+ }
+ .KPIsrow4 > div{
+     display: flex;
+     height: 100%;
+     font-size: 1.4vw;
+}
+ .KPIsrow3 > div{
+     display: flex;
+     height: 100%;
+     font-size: 1.4vw;
+     background: #fff;
+}
+.KPIsrow3 .subitems > div{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid;
+    padding: 0 15px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.KPIsrow3 .subitems > div .obj{
+    width: 50px;
+    display: inline-block;
+    height: 1.18em;
+    vertical-align: text-top;
+}
+
+.KPIsrow3 .subitems > div > span.KPIname{
+    margin-left: 10px
+}
+
+.KPIsrow3 > div:after{
+    color: #8f8f8f;
+    /* content: "\EB"; */
+    font-family: "LUI icons";
+    font-size: 14px;
+    line-height: 35px;
+    position: absolute;
+    right: 15px;
+}
+ .KPIsrow3 .qvObgContainer {
+     width: 20%;
+     overflow: hidden;
+     margin-left: 10%;
+}
+ .KPIrow3Title {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+ .KPIrow3Title span{
+    position:absolute;
+    text-align: center;
+    width: 60%;
+    left: 20%;
+    line-height: 24px;
+}
+ .icon_arrow {
+     width: 1em;
+     height: 1em;
+     position: absolute;
+     bottom: 5px;
+     right: 8px;
+     z-index: 10;
+}
+ #back-blue {
+     height: 120px;
+     background-color: rgb(50,94,134);
+     position: fixed;
+     bottom: 0px;
+     width: 100%;
+     z-index: 2;
+}
+/*--------------- SUBPAGES --------------*/
+
+ .nav-tabs>li {
+     margin-bottom: 0;
+     background-color: white;
+     flex-grow: 1;
+}
+ .nav-tabs>li>a {
+     margin-right: 1vw !important;
+     color: #50555a;
+     background-color: rgb(235,235,235);
+     font-size: 1.1vw;
+     font-weight: 400;
+     border: none !important;
+     padding: 6px 25px !important;
+}
+ .nav>li>a:hover, .active {
+     background-color: rgb(122,122,122) !important;
+     color: white !important;
+     transition: all .40s ease-in-out;
+     -moz-transition: all .40s ease-in-out;
+     -webkit-transition: all .40s ease-in-out;
+}
+ .nav-tabs {
+     border-bottom: 8px solid rgb(122,122,122) !important;
+     display: flex;
+}
+ .nav-tabs li:last-child>a {
+     margin-right: 0 !important;
+}
+ .tab_content {
+    background-color: #fff;
+     padding-bottom: 6vw;
+}
+ .fltPosition1, .fltPosition2, .fltPosition3, .fltPosition4 {
+}
+ .textFilterWrapper{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     justify-items: center;
+     padding: 10px 0 0;
+}
+ #fltPosition5, #fltPosition6 {
+}
+ .fltObjects{
+     margin-left: 1vw !important;
+}
+ .dropdown > button, .dropdown > ul {
+     background-color: white;
+     border: 1px solid #ddd;
+}
+ .fltPosition2, .fltPosition4, .fltPosition2b {
+    text-align: right;
+}
+ .fltPosition2 .dropdown-menu, .fltPosition4 .dropdown-menu {
+    left: auto;
+     right:0;
+}
+ .objFrame{
+    display: flex;
+}
+ .switchBtn {
+    height:2.5vw;
+}
+ #fltPosition0 {
+    padding-top: 1vw;
+     margin-left: 1vw;
+     width: 26vmax;
+}
+ .dropdown-menu{
+}
+ .legend-square {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+ .legend-text{
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    display: inline-block;
+    vertical-align: top;
+}
+ .legend,
+ .legend1 {
+    /* display: inline-flex; */
+    margin-top: 1vw;
+}
+ .legendLabel {
+     background-color: white;
+     padding: 10px;
+     width: 80%;
+     position: relative;
+     top: 0;
+     z-index: 100;
+}
+
+ .comingSoonTmpImg {
+    width: 100%;
+}
+ .KPIrow1 {
+     flex: 1 1 auto;
+     height: 100%;
+     width: 100%;
+}
+ .KPIrow2 {
+     flex: 1 1 auto;
+     height: 100%;
+     width: 100%;
+}
+ .KPIrow3, .KPIrow4 {
+     flex: 1 1 auto;
+     height: 100%;
+     width: 100%;
+}
+
+#page1 .KPIrow3 .qv-object-qsstatistic{
+     overflow: hidden!important;
+}
+
+#page1 .KPIrow3 .qv-object-qsstatistic .ui.horizontal.tiny.statistic{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+#page1 .KPI .statistic>.label{
+     font-size: 1.2vw;
+}
+ .qvobjectHdn {
+     display: none;
+}
+ .heatmapObject {
+    height: 500px !important;
+}
+ .objFrame .qvobjectHdn, .objFrame .qvobjectHdn {
+     width: 50%;
+}
+ .qvobjectHigher {
+     flex: 1 1 auto;
+     height: 500px;
+}
+ .qvplaceholder, .qvobject {
+     flex: 1 1 auto;
+     height: 350px;
+}
+
+.qvobject center{
+    position: absolute; 
+    top: 30%;
+    width: 100%;
+    font-size: 15px;
+    color: #7a7a7a;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+ .qvobjectLastReload {
+     flex: 1 1 auto;
+     height: 200px;
+}
+ #popup {
+     background-color: #c3534b;
+     color: #FFFFFF;
+     position: fixed;
+     max-width: 250px;
+     padding: 10px;
+     margin: 10px;
+     bottom: 0;
+     right: 0;
+     display: none;
+     border-radius: 5px;
+     z-index: 6;
+     font-family: sans-serif;
+}
+ .close {
+     cursor: pointer;
+     background: 0 0;
+     border: 0;
+     float: right;
+     font-size: 21px;
+     font-weight: 700;
+     line-height: 1;
+     color: #000;
+     text-shadow: 0 1px 0 #fff;
+     opacity: .2;
+     position: absolute;
+     right: 9px;
+     top: 7px;
+}
+ .close:hover {
+     opacity: .5;
+}
+ #popupText {
+     margin-right: 23px;
+}
+
+.zoom{
+     position: absolute;
+     right: 5px;
+     margin-top: 5px;
+     font-size: 11px;
+     padding: 5px;
+     width: 25px;
+     height: 25px;
+     text-align: center;
+     background-color: #325e86;
+     z-index: 95;
+     color: #ffffff;
+     border-radius: 100%;
+     cursor: pointer;
+}
+.zoomed{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    width: 90vw;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px 20px 0;
+    background: #fff;
+    box-shadow: 0 0 5px 0px;
+    border-radius: 3px;
+    z-index: 99;
+}
+.zoomed .close{
+     display: block;
+     position: absolute;
+     right: 5px;
+     top: 5px;
+     font-size: 20px;
+     padding: 2px;
+     width: 25px;
+     height: 25px;
+     text-align: center;
+     background-color: #325e86!important;
+     z-index: 99;
+     color: #ffffff!important;
+     border-radius: 100%;
+     cursor: pointer;
+     opacity: 1!important;
+}
+ .qv-global-selections{
+     top: 105px;
+     width: calc(100% - 30px);
+     margin: 0 15px;
+     height: -webkit-calc(100vh - 105px)!important;
+     height: calc(100vh - 105px)!important;
+}
+#page5 table,
+#page5 table th {text-align: center!important}
+#page5 tbody td,
+#page5 tbody td div.value.ng-binding {cursor: pointer!important}
+ @media(max-width: 999px){
+     #header_container .navbar-header .navbar-brand{
+         padding: 10px 0;
+         width: auto;
+         margin: 0;
+    }
+     #navLogo {
+         height: 30px;
+         margin-top: 0;
+    }
+     #header_container #headerTitle {
+         margin-left: 60px;
+         font-size: 15px;
+         margin-top: 15px;
+    }
+     #header_full_mod #headerTitle{
+         font-size: 16px;
+         margin-left: 70px;
+         margin-top: 6px;
+    }
+     #header_full_mod #headerSubtitle{
+         font-size: 10px;
+         margin-left: 70px;
+         margin-bottom: 6px;
+    }
+     #filterBar_container {
+         width: 100%;
+         background: #bdbdbc;
+         position: fixed;
+         bottom: 0;
+         z-index: 4;
+         left: 0;
+         padding: 5px 15px;
+    }
+     #filterBar_container .filter_actions{
+         width: 100%;
+         background: #346088;
+         position: fixed;
+         bottom: 0;
+         z-index: 4;
+         left: 0;
+         padding: 5px 15px;
+    }
+     #filterBar_container .filter_actions button{
+         width: 48%;
+         margin: 0 1%;
+         float: left;
+         text-align: center!important;
+    }
+     #filterBar_container .slider{
+         display: none;
+    }
+     #filterBar_container #filterBar {
+         position: fixed;
+         background: rgba(122, 122, 122, 0.75);
+         width: calc(100% - 40px);
+         bottom: 40px;
+         height: 30vh;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         margin-left: 1%;
+         display: flex;
+    }
+     #filterBar_container #filterBar div{
+         width: 80% 
+    }
+     #filterBar_container #filterBar span.close{
+         color: #fff;
+         opacity: 1;
+         text-shadow: 0 1px 0 #505050;
+         font-size: 31px;
+         position: absolute;
+         margin-top: -5px;
+         margin-left: -5px;
+    }
+     .qvobjectBar {
+         width: 100% 
+    }
+     #filterBar .dropdown-menu {
+         position: absolute;
+         width: 90%;
+         top: unset;
+         bottom: 100% 
+    }
+     .nav-tabs>li.nav-item {
+         width: 100%;
+         margin-bottom: 2px;
+    }
+     .nav-tabs>li.nav-item>a {
+         margin-right: 0;
+         width: 100%;
+         text-align: center;
+         font-size: 12px;
+         font-weight: bolder 
+    }
+     #fltPosition0 {
+         padding-top: 15px;
+         margin-left: 15px;
+    }
+    .zoom{
+        margin-top: 0
+    }
+     .objectsContainer.row div[class^="col-"] {
+         margin-bottom: 25px;
+         padding-bottom: 40px;
+         border-bottom: 1px solid #ccc;
+    }
+     .fltPosition1, .fltPosition2, .fltPosition3, .fltPosition4 {
+         display: block;
+         margin-top: 15px;
+    }
+     .fltPosition1 p, .fltPosition2 p, .fltPosition3 p, .fltPosition4 p{
+         text-align: center;
+    }
+     .fltPosition1 .btn, .fltPosition2 .btn, .fltPosition3 .btn, .fltPosition4 .btn{
+         text-align: center;
+         width: 100% 
+    }
+     .textFilterWrapper{
+         display: block;
+    }
+     #fltPosition5, #fltPosition6 {
+         height: 30px;
+         width: 100%;
+         display: block;
+    }
+     .switchBtn {
+         height: 25px;
+    }
+     .qvplaceholder, .qvobject{
+         max-width: 100% 
+    }
+     .qv-object .qv-object-title .qv-object-title-text{
+         white-space: normal;
+         font-size: 1.3em;
+    }
+     .iconMenu {
+         height: 15px;
+         width: 15px;
+         margin-top: -4px;
+         margin-right: 6px;
+    }
+     .KPIsrow1, .KPIsrow2, .KPIsrow3, .KPIsrow4 {
+         margin-bottom: 15px;
+    }
+     .KPIsrow1.row div[class^="col-"], .KPIsrow2.row div[class^="col-"], .KPIsrow3.row div[class^="col-"], .KPIsrow4.row div[class^="col-"] {
+         margin-bottom: 15px;
+    }
+     .infBtn{
+         text-align: right;
+    }
+     .KPI{
+         height: 70px;
+    }
+     .KPIsrow1 .KPI {
+         height: 160px 
+    }
+     .KPIsrow1 .statistic-1 .label {
+         font-size: 16px!important;
+    }
+     .KPIsrow1 .statistic-1 .value {
+         font-size: 14px!important;
+    }
+     .KPIsrow1 .statistic-2 .value {
+         font-size: 12px !important;
+    }
+     .KPIsrow1 .statistic-2 .label {
+         font-size: 10px !important;
+    }
+     .KPIimg {
+         width: 20%;
+         overflow: hidden;
+         position: relative;
+    }
+     .KPIimg img {
+         width: 70%!important;
+         position: absolute;
+         left: 0px;
+         top: 50%;
+         transform: translateY(-50%) 
+    }
+     .KPIwithImage .qvObgContainer {
+         width: 78%;
+         position: absolute;
+         left: 22%;
+         top: 50%;
+         transform: translateY(-50%);
+         margin-top: 0;
+    }
+     .KPIsrow2 .statistic-1 .value {
+         font-size: 12px !important;
+         margin-left: 5px !important 
+    }
+     .KPIsrow2 .statistic {
+         margin-bottom: 1px !important 
+    }
+     .KPIsrow2 .statistic .label {
+         font-size: 10px !important;
+         margin-left: 0!important 
+    }
+     .KPIsrow3 > div {
+         height: 30%;
+         font-size: 10px;
+    }
+     .KPIsrow3 .qvObgContainer {
+         width: 20%;
+         height: 20px;
+         margin-top: 3px;
+    }
+    .KPIrow3Title{
+         font-size: 11px;
+         line-height: 18px;
+    }
+}
+ @media(min-width: 999px){
+     #filterBar_container #filterBar span.close{ display: none }
+     #header_container .navbar-nav {
+         margin-top: 0;
+         margin-right: 0px;
+         height: 70px;
+    }
+     #header_container .nav>li>a{
+         line-height: 50px 
+    }
+     #header_container .navbar-header{
+         height: 70px 
+    }
+     #header_container .navbar-header .navbar-brand{
+         height: 70px 
+    }
+     .filter_actions{
+         display: none 
+    }
+}

@@ -1,0 +1,110 @@
+<div class="p-4 pb-5 pr-lg-5">
+    <div class="row">
+        <div class="col-sm-auto order-last">
+            <div class="btn-back bg-primary text-white text-uppercase btn p-0" ng-click="goBack()">
+                <i class="fa fa-caret-left p-2 border-right"></i>  &nbsp;Back &nbsp;
+            </div>
+        </div>
+        <div class="col-sm">
+            <h2 class="pl-3 pb-0">
+                <span>{{section +'&nbsp;'+ ' >'}}</span>
+            </h2>
+        </div>
+    </div>    
+    <div class="alert alert-warning fade show" role="alert" ng-show="error">
+        <strong>Note!</strong> {{error}}
+        <p> There are no charts for the current selections
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="page-title box-shadow-4 text-{{color['S_KPI_' + sectionId + '_' + kpiId] }} pl-5 p-3" >
+                <span>{{kpiName}}</span>
+            </h1>
+        </div>
+    </div>
+    <div class="dropdown" ng-show="groups.length" ng-init="activeGroup = groups[0]">
+        <a class="btn btn-primary btn-outline dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{activeGroup}}
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item btn" ng-repeat="group in groups" ng-click="selectGroup(group)">{{group}}</a>
+        </div>
+    </div>
+  
+    <div class="row mt-5" ng-init="$parent.tableView">
+        <div class="col-sm-6 p-5" ng-repeat="object in objects" 
+        test="{{object.group}}"
+        test2="{{activeGroup}}"
+        test3="{{$parent.tableView}}"
+        ng-show="
+        (!object.group || object.group === activeGroup) && 
+        (!object.type || (object.type === 'line' ? $parent.tableView : !$parent.tableView) )">
+
+            <div class="nav-item toggle" ng-show="object.type" style="display: flex; align-items: center; margin-bottom: 20px; margin-top: -50px">
+                <span>Bar Chart / Line Chart</span>
+                <label class="switch" style="margin-bottom: 0!important; margin-left: 10px">
+                    <input type="checkbox" ng-model="$parent.tableView" ng-click="resize()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="object-wrapper-{{$index}}" style="height: 400px" ng-style="subobjects && {'height': 'auto'}" >
+                <div ng-repeat="subobject in subobjects" class="mb-5">
+                    <div id="subobject-wrapper-{{$parent.$index}}-{{$index}}" style="height: 400px"></div>
+                    <div class="col-sm-2 legend" ng-show="subobject.legend">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div ng-repeat="(color, desc) in subobject.legend" class="legend-custom bg-{{color}}"></div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div ng-repeat="(color, desc) in subobject.legend" class="desc-custom">{{desc}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legendDesc" ng-show="subobject.legendDesc">{{subobject.legendDesc}}</div>
+                </div>
+             </div>
+                 <div class="legend " ng-show="object.customLegend">
+                     <div class="btn bg-primary text-white text-uppercase btn p-0" data-toggle="modal" data-target="#legendModal">
+                          &nbsp;Legend &nbsp;
+                    </div>
+                 </div>
+            <div class="legend" ng-show="object.legend">
+                <!--<div ng-repeat="(color, desc) in object.legend" class="chip bg-{{color}}">{{desc}}</div>-->
+                <div class="col-sm-2 legend " ng-show="object.legend">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div ng-repeat="(color,desc) in object.legend" class="legend-custom  bg-{{color}}"></div>
+                        </div>
+                        <div class="col-sm-2">
+                             <div ng-repeat="(color, desc) in object.legend" class="desc-custom">{{desc}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="legendDesc" ng-show="object.legendDesc">{{object.legendDesc}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="legendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Legends</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+          <div class="modal-body">
+                <div>
+                    <img src="images\legend_CA.png" alt="legend">
+                </div>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>

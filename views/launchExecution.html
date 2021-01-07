@@ -1,0 +1,125 @@
+<div  class="p-4 pb-5 pr-lg-5">
+    <h1 class="page-title box-shadow-4 pl-5 p-3 text-{{color['LaucExe'] }}">
+        <span>Launch Execution</span>
+    </h1>
+    <div class="row heatmap brands mt-5" ng-init="tableSwitch" ng-show="!tableSwitch">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs border-dark" id="launchExecutionBrandTab" role="tablist">
+                <li class="nav-item toggle">
+                    <label class="switch">
+                        <input type="checkbox" ng-model="tableSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="nav-item" ng-repeat="brand in brands">
+                    <a class="nav-link rounded-0 pt-0 pb-0" 
+                        id="product-tab" data-toggle="tab" href="#{{brand.split(' ').join('')}}" 
+                        role="tab" 
+                        aria-controls="{{brand.split(' ').join('')}}" 
+                        aria-selected="true" 
+                        ng-class="{'active' : (!selectedBrands.length ?  $index === 0 : selectedBrands.indexOf(brand) === 0)}" 
+                        ng-show="selectedBrands.includes(brand) || !selectedBrands.length"
+                        >
+                        <img src="images/{{brand}}.png" alt="{{brand}}">
+                    </a>
+                </li>           
+            </ul>
+            <div class="tab-content bg-white" id="homeTabContent">
+                <div class="tab-pane fade p-3" 
+                    ng-repeat="brand in brands" 
+                    id="{{brand.split(' ').join('')}}" 
+                    role="tabpanel" 
+                    aria-labelledby="product-tab"
+                    ng-class="{'show active' : (!selectedBrands.length ? $index === 0 : selectedBrands.indexOf(brand) === 0)}"
+                    >
+                    <table class="product_table table text-center">
+                        <tr>
+                            <td>&nbsp;
+                            </td>
+                            <td ng-repeat="KPI in KPIs">
+                                 <div class="KPICardGeneric text-{{color['LE' + KPI.id + brand] }} bg-light" ng-click="openSingleKPI(null,brand,KPI.id, KPI.label, KPI.objects)" >
+                                    <span>{{KPI.label}}</span>
+                                    <img src="images/icon_chart.png" >
+                                </div>
+                            </td>                       
+                        </tr>
+                        <tr ng-repeat="country in countries" ng-show="selectedCountries.includes(country) || !selectedCountries.length">
+                            <td>
+                                <div class="KPICardHeader">
+                                    <img src="images/{{country}}.png" alt="{{country}}">
+                                    {{country}}
+                                </div>
+                            </td>
+                            <td ng-repeat="KPI in KPIs">
+                                <div class="KPICard bg-{{color['LaucExe' + KPI.id + country +brand] }}" ng-click="openSingleKPI(country ,brand, KPI.id, KPI.label, KPI.objects)" >
+                                    <img src="images/icon_chart.png" >
+                                    <small>View more</small>
+                                </div>
+                            </td>                      
+                        </tr>
+                    </table>
+                </div>                  
+            </div>
+        </div>
+    </div>
+
+    <div class="row heatmap countries mt-5" ng-show="tableSwitch">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs border-dark" id="launchExecutionCountryTab" role="tablist">
+                 <li class="nav-item toggle">
+                    <label class="switch">
+                        <input type="checkbox" ng-model="tableSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="nav-item" ng-repeat="country in countries">
+                    <a class="nav-link rounded-0 pt-0 pb-0" 
+                        id="product-tab" data-toggle="tab" href="#{{country}}" 
+                        role="tab" 
+                        aria-controls="{{country}}" 
+                        aria-selected="true" 
+                        ng-class="{'active' : (!selectedCountries.length ?  $index === 0 : selectedCountries.indexOf(country) === 0)}" 
+                        ng-show="selectedCountries.includes(country) || !selectedCountries.length"
+                        >
+                        <img src="images/{{country}}.png" alt="{{country}}"> {{country}}
+                    </a>
+                </li>                    
+            </ul>
+            <div class="tab-content bg-white" id="homeTabContent">
+               <div class="tab-pane fade show p-3" 
+                    ng-repeat="country in countries" 
+                    id="{{country}}" 
+                    role="tabpanel" 
+                    aria-labelledby="product-tab"
+                    ng-class="{'show active' : (!selectedCountries.length ?  $index === 0 : selectedCountries.indexOf(country) === 0)}"
+                    >
+                    <table class="product_table table text-center">
+                        <tr>
+                            <td>&nbsp;
+                            </td>
+                            <td ng-repeat="KPI in KPIs">
+                                <div class="KPICardGeneric text-{{color['LE' + KPI.id + country] }} bg-light" ng-click="openSingleKPI(country,brand,KPI.id, KPI.label, KPI.objects)" >
+                                    <span>{{KPI.label}}</span>
+                                    <img src="images/icon_chart.png" >
+                                </div>
+                            </td>                      
+                        </tr>
+                        <tr ng-repeat="brand in brands" ng-show="selectedBrands.includes(brand) || !selectedBrands.length">
+                            <td>
+                                <div class="KPICardHeader" >
+                                    <img src="images/{{brand}}.png" alt="{{brand}}">
+                                </div>
+                            </td>
+                            <td ng-repeat="KPI in KPIs" ng-click="openSingleKPI(country,brand,KPI.id, KPI.label, KPI.objects)" ng-init="getScoreColor('LaucExe', KPI.id)">
+                                <div class="KPICard bg-{{color['LaucExe' + KPI.id +country+brand] }}">
+                                    <img src="images/icon_chart.png" >
+                                    <small>View more</small>
+                                </div>
+                            </td>                       
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

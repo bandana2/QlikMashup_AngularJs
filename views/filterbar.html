@@ -1,0 +1,18 @@
+<div class="pt-2 pb-2 bg-gray border-bottom border-dark-gray tr-50">
+    &nbsp;
+    <span 
+    ng-repeat="country in selectedCountries" 
+    ng-click="toggleFilter('Country', country)" 
+    class="border border-dark-gray pt-1 pb-1 pl-2 pr-2 mr-2 text-uppercase small font-weight-bold"
+    style="cursor: pointer">
+        {{country}} &times;
+    </span>
+
+    <span 
+    ng-repeat="brand in selectedBrands" 
+    ng-click="toggleFilter('[Novartis Brand]', brand)" 
+    class="border border-dark-gray pt-1 pb-1 pl-2 pr-2 mr-2 text-uppercase small font-weight-bold"
+    style="cursor: pointer">
+        {{brand}} &times;
+    </span>
+</div>

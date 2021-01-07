@@ -1,0 +1,88 @@
+html,
+body,
+#app{
+    height: 100%;
+    font: "Lato" 16px;
+}
+
+.border-4 {
+    border-width: 1.5rem !important;
+}
+
+.sidebar .dropright{
+    position: static;
+}
+
+.sidebar .dropright .dropdown-toggle:after{
+    display: none;
+}
+
+.sidebar .dropright .dropdown-menu{
+    height: 100%;
+    margin-left: 0;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar .dropright.show > a > div {
+    background-color: #343a40!important;
+    box-shadow: 0.5rem 0 0 0 inset #007bff;
+}
+
+#navLogo{
+    width: 80px
+}
+
+#headerTitle{
+    font-size: 20px;
+    font-weight: bold
+}
+
+#headerSubtitle{
+    font-size: 14px;
+}
+
+#mainNav > ul > li > a{
+    width: 80px
+}
+
+#mainNav > ul > li > a span{
+    font-size: 10px;
+    text-align: center;
+    line-height: normal
+}
+
+.iconMenu{
+    width: 20px;
+    margin-bottom: 10px
+}
+
+.card.kpi-box{
+    border-radius: 0;
+}
+
+.card.kpi-box .card-header{
+    border-radius: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+}
+
+.card.kpi-box .card-header .date,
+.card.kpi-box .card-header .title{
+    padding: .75rem 1.0rem;
+    width: auto;
+    color: #ffffff;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+div{
+
+}
+

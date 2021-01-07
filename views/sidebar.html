@@ -1,0 +1,48 @@
+<div class="pt-2 pb-2 bg-secondary border-secondary border-bottom text-white text-center">
+    FILTERS
+</div>
+<ul class="mobileflexfilter nav nav-tabs flex-column">
+    <li class="mobileflexwidth nav-item dropright border-0">
+        <a class="nav-link dropdown-toggle p-0 border-0 bg-blue rounded-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="pt-4 pb-4 text-white text-center">
+                <h6>SELECT A</h6>
+                <img src="images/icon_country.png" alt="country" class="w-50"/>
+                <h5>COUNTRY</h5>
+            </div>
+        </a>
+        <div class="dropdown-menu bg-dark text-white w-100">
+            <ul class="nav flex-column">
+                <li class="nav-item" ng-repeat="country in countries">
+                    <a 
+                    class="nav-link bg-dark text-light border-right-0 border-left-0 border-secondary rounded-0"
+                    ng-click="toggleFilter('Country', country)"
+                    ng-class="{'border-top-0' : $index === 0, 'active' : selectedCountries.includes(country)}">
+                        {{country}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="mobileflexwidth nav-item dropright border-0">
+        <a class="nav-link dropdown-toggle p-0 border-0 bg-blue rounded-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <div class="pt-4 pb-4 text-white text-center">
+                <h6>SELECT A</h6>
+                <img src="images/icon_brand.png" alt="brand" class="w-50"/>
+                <h5>BRAND</h5>
+            </div>
+        </a>
+        <div class="dropdown-menu bg-dark text-white w-100">
+            <ul class="nav flex-column">
+                <li class="nav-item" ng-repeat="brand in brands">
+                    <a class="nav-link bg-dark text-light border-right-0 border-left-0 border-secondary rounded-0" 
+                    ng-click="toggleFilter('[Novartis Brand]', brand)"
+                    ng-class="{'border-top-0' : $index === 0, 'active' : selectedBrands.includes(brand)}">
+                        {{brand}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+</ul>
